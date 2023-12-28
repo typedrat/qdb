@@ -8,6 +8,9 @@ dependencies:
   '@astrojs/check':
     specifier: ^0.3.4
     version: 0.3.4(typescript@5.3.3)
+  '@fontsource/courier-prime':
+    specifier: ^5.0.18
+    version: 5.0.18
   astro:
     specifier: ^4.0.7
     version: 4.0.7(typescript@5.3.3)
@@ -576,6 +579,10 @@ packages:
     requiresBuild: true
     dev: false
     optional: true
+
+  /@fontsource/courier-prime@5.0.18:
+    resolution: {integrity: sha512-FbVVSsqcGbuScql9mHXFfu7GQTOCJMBaBwTjkumm1MwDmum1z1nOYyYPs+RBiljwWs2mKsQbuDvnVPh5u1G5Qw==}
+    dev: false
 
   /@jridgewell/gen-mapping@0.3.3:
     resolution: {integrity: sha512-HLhSWOLRi875zjjMG/r+Nv0oCW8umGb0BgEhyX3dDX3egwZtB8PqLnjz3yedt8R5StBrzcg4aBpnh8UA9D1BoQ==}

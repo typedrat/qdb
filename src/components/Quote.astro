@@ -1,0 +1,63 @@
+---
+interface Props {
+    data: {
+        id: number;
+        score: number;
+        lines: string[];
+    };
+}
+
+const { id, score, lines } = Astro.props.data;
+
+function scoreClass(score: number): "positive" | "neutral" | "negative" {
+    if (score > 0) {
+        return "positive";
+    } else if (score == 0) {
+        return "neutral";
+    } else {
+        return "negative";
+    }
+}
+---
+
+<article>
+    <h4>
+        <a href=`/quote/${id}`>#{id}</a>
+         (<span class={scoreClass(score)}>{score}</span>)
+    </h4>
+
+    {
+        lines.map((line) => (
+            <>
+                <span class="line">{line}</span>
+                <br />
+            </>
+        ))
+    }
+</article>
+
+<style>
+    article {
+        font-family: "Courier Prime", monospace;
+
+        &:not(:last-of-type) {
+            margin-bottom: 0.5em;
+        }
+    }
+
+    h4 {
+        margin: 0;
+    }
+
+    .positive {
+        color: green;
+    }
+
+    .neutral {
+        color: yellow;
+    }
+
+    .negative {
+        color: red;
+    }
+</style>
