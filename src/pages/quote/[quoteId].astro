@@ -8,14 +8,14 @@ import quotes from "../_quotes.json";
 export const getStaticPaths = (async () => {
     return quotes.map(({ id }) => ({
         params: {
-            quoteId: id,
+            quoteId: id.toString(),
         },
     }));
 }) satisfies GetStaticPaths;
 
 const { quoteId: rawQuoteId } = Astro.params;
 const quoteId = parseInt(rawQuoteId, 10);
-const quoteData = quotes.find((quote) => quote.id === quoteId);
+const quoteData = quotes.find((quote) => quote.id === quoteId)!;
 ---
 
 <Layout title={`Quote #${quoteId} (${quoteData.id})`}>
