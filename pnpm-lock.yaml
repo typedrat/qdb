@@ -20,6 +20,9 @@ dependencies:
   '@picocss/pico':
     specifier: ^2.0.6
     version: 2.0.6
+  '@types/reservoir':
+    specifier: ^0.1.6
+    version: 0.1.6
   astro:
     specifier: ^4.5.4
     version: 4.5.4(sass@1.72.0)(typescript@5.4.2)
@@ -29,6 +32,9 @@ dependencies:
   astro-themes:
     specifier: ^0.2.5
     version: 0.2.5(astro@4.5.4)
+  reservoir:
+    specifier: ^0.1.2
+    version: 0.1.2
   sass:
     specifier: ^1.72.0
     version: 1.72.0
@@ -943,6 +949,10 @@ packages:
     resolution: {integrity: sha512-dHM6ZxwlmuZaRmUPfv1p+KrdD1Dci04FbdEm/9wEMouFqxYoFl5aMkt0VMAUtYRQDyYvD41WJLukhq/ha3YuTw==}
     dependencies:
       undici-types: 5.26.5
+    dev: false
+
+  /@types/reservoir@0.1.6:
+    resolution: {integrity: sha512-2Eo3hcBaWYtrr0DwJLa8X/V/d8YQw72s7OuE9N+MrnYx2MQ72tftXX9lDQwnPKMeRiJrBXFbhfJ4FRMrs2+39w==}
     dev: false
 
   /@types/tar@6.1.11:
@@ -3592,6 +3602,10 @@ packages:
   /require-directory@2.1.1:
     resolution: {integrity: sha512-fGxEI7+wsG9xrvdjsrlmL22OMTTiHRwAMroiEeMgq8gzoLC/PQr7RsRDSTLUg/bZAZtF+TVIkHc6/4RIKrui+Q==}
     engines: {node: '>=0.10.0'}
+    dev: false
+
+  /reservoir@0.1.2:
+    resolution: {integrity: sha512-ysyw95gLBhMAzqIVrOHJ2yMrRQHAS+h97bS9r89Z7Ou10Jhl2k5KOsyjPqrxL+WfEanov0o5bAMVzQ7AKyENHA==}
     dev: false
 
   /resolve-from@5.0.0:

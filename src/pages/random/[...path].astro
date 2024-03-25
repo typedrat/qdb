@@ -2,41 +2,36 @@
 export const prerender = false;
 
 import { getCollection } from "astro:content";
+import Reservoir from "reservoir";
 
-import Quote from "../../components/Quote.astro";
+import Quote, { type QuoteData } from "../../components/Quote.astro";
 import Layout from "../../layouts/Layout.astro";
 
 interface Props {
     path: string | undefined;
 }
 
-const sampleSize = ([...arr], n = 1) => {
-    let m = arr.length;
-    while (m) {
-        const i = Math.floor(Math.random() * m--);
-        [arr[m], arr[i]] = [arr[i], arr[m]];
-    }
-    return arr.slice(0, n);
-};
-
 const { path } = Astro.params;
 
 let quotes = await getCollection("quotes");
+let selectedQuotes = Reservoir<QuoteData>(25);
 
 if (path === undefined) {
-    // Do nothing.
+    quotes.forEach((quote) => selectedQuotes.pushSome(quote.data));
 } else if (path === "positive") {
-    quotes = quotes.filter((quote) => quote.data.score > 0);
+    quotes.forEach((quote) => {
+        if (quote.data.score > 0) {
+            selectedQuotes.pushSome(quote.data);
+        }
+    });
 } else {
     return Astro.redirect("/404");
 }
-
-const selectedQuotes = sampleSize(quotes, 25);
 ---
 
 <Layout title="Random Quotes">
     {
-        selectedQuotes.map(({ data }) => {
+        selectedQuotes.map((data) => {
             return <Quote data={data} />;
         })
     }
