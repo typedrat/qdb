@@ -1,0 +1,8 @@
+{
+    "id": 725783,
+    "score": 1235,
+    "lines": [
+        "<1> please tell me if there's any way to check if a table exist in mysql database",
+        "<2> if (mysql_query('DROP TABLE table_name')) echo \"table existed\";"
+    ]
+}

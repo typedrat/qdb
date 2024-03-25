@@ -1,0 +1,11 @@
+{
+    "id": 140596,
+    "score": 135,
+    "lines": [
+        "<cemil> what does it mean? :)",
+        "<cemil> /dev/hda4\u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 24G\u00a0\u00a0 33M\u00a0\u00a0 22G\u00a0\u00a0 1% /db",
+        "<cemil> /dev/hda4 on /db type ext3 (rw)",
+        "<tibyke> it means you have to contact your systems administrator",
+        "<cemil> i am :)"
+    ]
+}

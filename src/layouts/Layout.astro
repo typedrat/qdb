@@ -1,37 +1,103 @@
 ---
 import "@fontsource/courier-prime";
+import Themes from "astro-themes";
+import ThemeToggler from "../components/ThemeToggler.astro";
 
 interface Props {
-    title: string;
+    title?: string;
+    frontmatter?: {
+        title?: string;
+    };
 }
 
-const { title } = Astro.props;
+const title = Astro.props.title ?? Astro.props.frontmatter?.title ?? "QDB";
 ---
 
 <!doctype html>
 <html lang="en">
     <head>
+        <Themes />
         <meta charset="UTF-8" />
         <meta name="description" content="Astro description" />
         <meta name="viewport" content="width=device-width" />
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <meta name="generator" content={Astro.generator} />
-        <title>QDB: {title}</title>
+        <title>QDB &mdash; {title}</title>
     </head>
     <body>
-        <slot />
+        <nav class="container">
+            <ul>
+                <li><a href="/">qdb.lol</a></li>
+            </ul>
+            <ul>
+                <li>
+                    <a href="/browse/1">Browse</a>
+                </li>
+                <li>
+                    <a href="/top">Top Rated</a>
+                </li>
+                <li>
+                    <a href="/random">Random</a>
+                    <a href="/random/positive">(&gt;0)</a>
+                </li>
+                <li>
+                    <ThemeToggler />
+                </li>
+            </ul>
+        </nav>
+
+        <main class="container">
+            <slot />
+        </main>
+
+        <footer class="container">
+            Created by
+            <a href="https://typedr.at" target="_blank"> Alexis Williams </a>.
+            All quotes are unchanged from
+            <code>bash.org</code>
+            and may be inappropriate or offensive, but are preserved for accuracy.
+            The code for this site is under the
+            <a href="https://choosealicense.com/licenses/mit/" target="_blank">
+                MIT License
+            </a>
+            and is available on
+            <a href="https://github.com/typedrat/qdb" target="_blank">
+                GitHub
+            </a>.
+        </footer>
+        <style is:global lang="scss">
+            @use "@picocss/pico/scss/pico" with (
+                $theme-color: "orange"
+            );
+
+            :root {
+                --pico-font-family-monospace: "Courier Prime", monospace;
+            }
+
+            body {
+                min-height: 100dvh;
+                display: flex;
+                flex-direction: column;
+
+                & > nav a {
+                    font-family: var(--pico-font-family-monospace);
+                }
+            }
+
+            footer {
+                margin-top: auto;
+                font-size: 0.875rem;
+
+                a {
+                    display: inline-block;
+                }
+            }
+
+            code {
+                background: none;
+                color: unset;
+                padding: unset;
+            }
+        </style>
     </body>
 </html>
-<style is:global>
-    html {
-        font-family: system-ui, sans-serif;
-        background: url(/clouds.webp) no-repeat center / cover;
-
-        min-width: 100dvw;
-        min-height: 100dvh;
-    }
-
-    code {
-        font-family: "Courier Prime", monospace;
-    }
-</style>

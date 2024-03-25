@@ -1,0 +1,13 @@
+{
+    "id": 42325,
+    "score": 77,
+    "lines": [
+        "< avoozl> what port did i need again for dns",
+        "< avoozl> its not 'domain' is it?",
+        "< rigel> 53",
+        "< rigel> both udp and tcp",
+        "< avoozl> hm i have those",
+        "< avoozl> thats odd",
+        "< rigel> clippy says: \"I see you need some network help! Would you like me to: * search the help files for 'dns setup', * open internet\u00a0 explorer to msdn.microsoft.com\""
+    ]
+}

@@ -1,0 +1,94 @@
+---
+import type { GetStaticPaths, Page } from "astro";
+import type { CollectionEntry } from "astro:content";
+import { getCollection } from "astro:content";
+import { Icon } from "astro-icon/components";
+
+import Layout from "../../layouts/Layout.astro";
+import Quote from "../../components/Quote.astro";
+
+export const getStaticPaths = (async ({ paginate }) => {
+    const allQuotes = await getCollection("quotes");
+    allQuotes.sort((a, b) => a.data.id - b.data.id);
+
+    return paginate(allQuotes, { pageSize: 25 });
+}) satisfies GetStaticPaths;
+
+interface Props {
+    page: Page<CollectionEntry<"quotes">>;
+}
+
+const { page } = Astro.props;
+---
+
+<Layout title="Browse Quotes">
+    {page.data.map((quote) => <Quote data={quote.data} />)}
+
+    <div role="group">
+        <a
+            aria-label="First Page"
+            data-tooltip="First Page"
+            role="button"
+            href="/browse/1"
+        >
+            <Icon name="radix-icons:double-arrow-left" />
+        </a>
+        <a
+            aria-label="Previous Page"
+            data-tooltip="Previous Page"
+            role="button"
+            href={page.url.prev ?? "/browse/1"}
+        >
+            <Icon name="radix-icons:arrow-left" />
+        </a>
+
+        <select class="page-selector" aria-label="Page...">
+            <option disabled value="">Page...</option>
+            {
+                Array.from({ length: page.lastPage }, (_v, k) => k + 1).map(
+                    (pageNum) => (
+                        <option
+                            value={pageNum}
+                            selected={pageNum === page.currentPage || undefined}
+                        >
+                            {pageNum}
+                        </option>
+                    )
+                )
+            }
+        </select>
+
+        <a
+            aria-label="Next Page"
+            data-tooltip="Next Page"
+            role="button"
+            href={page.url.next ?? `/browse/${page.lastPage}`}
+        >
+            <Icon name="radix-icons:arrow-right" />
+        </a>
+        <a
+            aria-label="Last Page"
+            data-tooltip="Last Page"
+            role="button"
+            href=`/browse/${page.lastPage}`
+        >
+            <Icon name="radix-icons:double-arrow-right" />
+        </a>
+    </div>
+</Layout>
+
+<style>
+    select {
+        text-align: center;
+    }
+</style>
+
+<script>
+    const select = document.querySelector(
+        ".page-selector"
+    )! as HTMLSelectElement;
+
+    select.addEventListener("change", () => {
+        window.location.href = `/browse/${select.value}`;
+    });
+</script>

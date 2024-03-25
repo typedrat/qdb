@@ -1,0 +1,9 @@
+{
+    "id": 744009,
+    "score": 456,
+    "lines": [
+        "<Chainsaw> If you want to run SELinux, you need to start installing an SELinux system. You can't just enable that USE-flag and expect things to work.",
+        "* ML-37 grins",
+        "<Chainsaw> That's like taking 14 wheels off of your 18-wheeler and saying \"this is now a car, off we go\"."
+    ]
+}

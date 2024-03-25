@@ -1,0 +1,8 @@
+{
+    "id": 1171,
+    "score": 369,
+    "lines": [
+        "loofaspunge: for(int food = 0; food < worldhunger; food++)",
+        "worldhunger--;"
+    ]
+}

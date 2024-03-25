@@ -1,0 +1,10 @@
+{
+    "id": 840506,
+    "score": 28,
+    "lines": [
+        "<@TekniQue> just keep it simple",
+        "<@TekniQue> if(Field.Grass == TRUE) { Ball.play(). }",
+        "<Kjarrval> But what if someone has performed Field.Shave() ?",
+        "<@TekniQue> good question"
+    ]
+}

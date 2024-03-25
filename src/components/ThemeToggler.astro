@@ -1,0 +1,50 @@
+---
+import { Icon } from "astro-icon/components";
+---
+
+<theme-toggler>
+    <button>
+        <Icon class="light" name="radix-icons:moon" />
+        <Icon class="dark" name="radix-icons:sun" />
+    </button>
+</theme-toggler>
+
+<style>
+    button {
+        line-height: 1rem;
+    }
+
+    :global([data-theme="light"]) .dark,
+    :global([data-theme="dark"]) .light {
+        display: none;
+    }
+</style>
+
+<script>
+    class ThemeToggler extends HTMLElement {
+        constructor() {
+            super();
+
+            const button = this.querySelector("button")!;
+
+            button.addEventListener("click", () => {
+                const currentTheme =
+                    document.documentElement.attributes.getNamedItem(
+                        "data-theme"
+                    )?.value;
+
+                if (currentTheme === "light") {
+                    document.dispatchEvent(
+                        new CustomEvent("set-theme", { detail: "dark" })
+                    );
+                } else if (currentTheme === "dark") {
+                    document.dispatchEvent(
+                        new CustomEvent("set-theme", { detail: "light" })
+                    );
+                }
+            });
+        }
+    }
+
+    customElements.define("theme-toggler", ThemeToggler);
+</script>

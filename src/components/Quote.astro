@@ -21,10 +21,10 @@ function scoreClass(score: number): "positive" | "neutral" | "negative" {
 ---
 
 <article>
-    <h4>
+    <header>
         <a href=`/quote/${id}`>#{id}</a>
-         (<span class={scoreClass(score)}>{score}</span>)
-    </h4>
+        (<span class={scoreClass(score)}>{score}</span>)
+    </header>
 
     {
         lines.map((line) => (
@@ -38,15 +38,11 @@ function scoreClass(score: number): "positive" | "neutral" | "negative" {
 
 <style>
     article {
-        font-family: "Courier Prime", monospace;
-
-        &:not(:last-of-type) {
-            margin-bottom: 0.5em;
-        }
+        font-family: var(--pico-font-family-monospace);
     }
 
-    h4 {
-        margin: 0;
+    header {
+        font-size: 1.25rem;
     }
 
     .positive {

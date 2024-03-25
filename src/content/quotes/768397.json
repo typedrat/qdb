@@ -1,0 +1,11 @@
+{
+    "id": 768397,
+    "score": 1115,
+    "lines": [
+        "< crschmidt> No software is bug free",
+        "< FrankW> #/bin/sh",
+        "< FrankW> echo \"Hello World\"",
+        "< FrankW> That's pretty bug free.",
+        "< crschmidt> FrankW: you missed a !"
+    ]
+}

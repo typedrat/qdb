@@ -1,0 +1,7 @@
+{
+    "id": 891175,
+    "score": 715,
+    "lines": [
+        "* polykurt gets pissed off when seemingly simple programs have lots of dependencies on other\u00a0 \u00a0 packages.\u00a0 People are taught to worship the concept of software reuse, but they take it too far.\u00a0 I should write a C library called libtruncate.\u00a0 Every time somebody needs to truncate an array, they will feel obligated to use my library instead of writing five lines of their own code to do the job.\u00a0 And I will make libtruncate depend on Gnome _and_ KDE _and_ JA"
+    ]
+}

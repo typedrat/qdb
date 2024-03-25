@@ -1,0 +1,15 @@
+{
+    "id": 396157,
+    "score": 232,
+    "lines": [
+        "SmarterChild: Market data (delayed 20 minutes) provided by Reuters",
+        "Ticker\u00a0 Price\u00a0 Change\u00a0 Percent\u00a0 Volume",
+        "1\u00a0 :-) B\u00a0 \u00a0 26.50\u00a0 +0.22\u00a0\u00a0 +0.84\u00a0 \u00a0 18300",
+        "2\u00a0 :-( A\u00a0 \u00a0 22.15\u00a0 -0.05\u00a0\u00a0 -0.23\u00a0 \u00a0 747600",
+        "3\u00a0 :-) S\u00a0 \u00a0 38.50\u00a0 +0.07\u00a0\u00a0 +0.18\u00a0 \u00a0 688700",
+        "4\u00a0 :-) T\u00a0 \u00a0 14.45\u00a0 +0.15\u00a0\u00a0 +1.05\u00a0 \u00a0 930700",
+        "5\u00a0 :-( A\u00a0 \u00a0 22.15\u00a0 -0.05\u00a0\u00a0 -0.23\u00a0 \u00a0 747600",
+        "6\u00a0 :-) R\u00a0 \u00a0 43.55\u00a0 +0.05\u00a0\u00a0 +0.11\u00a0 \u00a0 157700",
+        "7\u00a0 :-) D\u00a0 \u00a0 64.77\u00a0 +0.07\u00a0\u00a0 +0.11\u00a0 \u00a0 342600"
+    ]
+}

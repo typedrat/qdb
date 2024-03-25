@@ -1,0 +1,8 @@
+{
+    "id": 910094,
+    "score": 559,
+    "lines": [
+        "<mitkok> Hey, guys. Is there an easy way to split an array of 100 integers for example and write 3 numbers per line separated by whitespace into a file ?",
+        "<Izhido> #include \"realeasyfunctions.h\"\u00a0 /\u00a0 \u00a0 \u00a0 Split100intArrayWrite3xLineWithWhitespaceInto(FILE* f);"
+    ]
+}

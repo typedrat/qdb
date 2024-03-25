@@ -1,0 +1,7 @@
+{
+    "id": 3498,
+    "score": 248,
+    "lines": [
+        "<stack> if($want == \"illegal\") connect(efnet);"
+    ]
+}

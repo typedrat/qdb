@@ -1,0 +1,13 @@
+{
+    "id": 5804,
+    "score": 675,
+    "lines": [
+        "<+mirkin> does anybody know if it is possible using ms access to create a report which shows the records of a table",
+        "<+mirkin> but shows 3 columns across the page",
+        "<+mirkin> i.e",
+        "<+mirkin> record 1\u00a0 \u00a0 \u00a0 \u00a0 record 2\u00a0 \u00a0 \u00a0 \u00a0 record 3",
+        "<+mirkin> record 4\u00a0 \u00a0 \u00a0 \u00a0 record 5\u00a0 \u00a0 \u00a0 \u00a0 record 6",
+        "<+GoodScrat> That is impossible",
+        "<+GoodScrat> Computers are not that far advanced yet"
+    ]
+}

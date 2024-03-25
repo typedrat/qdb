@@ -1,0 +1,15 @@
+{
+    "id": 966218,
+    "score": 484,
+    "lines": [
+        "<tehron> i have a question about the english language: are parcel and packet synonym in any way?",
+        "<sabretooth> yes",
+        "<sabretooth> packet is generally smaller",
+        "<sabretooth> but they can be used interchangeably even with a large packet and a small parcel :)",
+        "<tehron> hm.. :P",
+        "<tehron> i think i can't receive parcels",
+        "<sabretooth> Well if you're sending them over TCP probably not",
+        "<tehron> :P very helpful",
+        "<sabretooth> if you're sending them by UDP, UPS or Royal Mail however they'll likely be dropped anyway"
+    ]
+}

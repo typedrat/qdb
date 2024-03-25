@@ -1,0 +1,12 @@
+{
+    "id": 925050,
+    "score": 3688,
+    "lines": [
+        "< Andys> oh dear",
+        "< Andys> in ruby, symbols are represented with a prepended colon",
+        "< Andys> eg.\u00a0\u00a0 :flag",
+        "< Andys> so some guy tshirt that said \":sex\"",
+        "< Andys> which everyone at railscamp knew meant \"Sex symbol\"",
+        "< Andys> he wore it until someone pointed out that to non-rubyists it said \"Colon sex\""
+    ]
+}

@@ -1,0 +1,23 @@
+---
+import type { GetStaticPaths } from "astro";
+import { getCollection, getEntry } from "astro:content";
+import Layout from "../../layouts/Layout.astro";
+import Quote from "../../components/Quote.astro";
+
+export const getStaticPaths = (async () => {
+    const allQuotes = await getCollection("quotes");
+
+    return allQuotes.map(({ id }) => ({
+        params: {
+            quoteId: id,
+        },
+    }));
+}) satisfies GetStaticPaths;
+
+const { quoteId } = Astro.params;
+const { data: quoteData } = await getEntry("quotes", quoteId);
+---
+
+<Layout title={`Quote #${quoteId} (${quoteData.score})`}>
+    <Quote data={quoteData} />
+</Layout>

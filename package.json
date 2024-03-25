@@ -1,18 +1,24 @@
 {
-  "name": "qdb",
-  "type": "module",
-  "version": "0.0.1",
-  "scripts": {
-    "dev": "astro dev",
-    "start": "astro dev",
-    "build": "astro check && astro build",
-    "preview": "astro preview",
-    "astro": "astro"
-  },
-  "dependencies": {
-    "@astrojs/check": "^0.3.4",
-    "@fontsource/courier-prime": "^5.0.18",
-    "astro": "^4.0.7",
-    "typescript": "^5.3.3"
-  }
+    "name": "qdb",
+    "type": "module",
+    "version": "0.0.1",
+    "scripts": {
+        "dev": "astro dev",
+        "start": "astro dev",
+        "build": "astro check && astro build",
+        "preview": "astro preview",
+        "astro": "astro"
+    },
+    "dependencies": {
+        "@astrojs/check": "^0.3.4",
+        "@astrojs/cloudflare": "^9.2.0",
+        "@fontsource/courier-prime": "^5.0.19",
+        "@iconify-json/radix-icons": "^1.1.14",
+        "@picocss/pico": "^2.0.6",
+        "astro": "^4.5.4",
+        "astro-icon": "^1.1.0",
+        "astro-themes": "^0.2.5",
+        "sass": "^1.72.0",
+        "typescript": "^5.4.2"
+    }
 }

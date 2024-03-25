@@ -1,0 +1,12 @@
+{
+    "id": 123609,
+    "score": 445,
+    "lines": [
+        "<maggie> how do i shut down my computer?",
+        "<uh> press start...",
+        "<maggie> no i want to SHUT DOWN! why does everyone tell me to click start...",
+        "<uh> ... you might as well just pull the power cord...",
+        "<maggie> uh but i also heard...",
+        "* maggie has quit irc (Error: connection reset by peer)"
+    ]
+}

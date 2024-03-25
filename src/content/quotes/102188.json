@@ -1,0 +1,9 @@
+{
+    "id": 102188,
+    "score": 541,
+    "lines": [
+        "< CausaSui> So I was showing a coworker bsd, and explaining flags, and speficically the schg flag",
+        "< CausaSui> And to give him an example that even root can't delete schg flagged stuff, I tried rm /kernel",
+        "< CausaSui> But it turns out that, for some reason, on fresh installs of 4.8, none of the kernels are flagged schg"
+    ]
+}

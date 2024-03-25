@@ -1,0 +1,12 @@
+{
+    "id": 34363,
+    "score": 114,
+    "lines": [
+        "<Magus> # robots.txt for http://www.riaa.com/",
+        "<Magus> # questions contact blong@riaa.com",
+        "<Magus> User-agent: *",
+        "<Magus> Disallow: /temp/",
+        "<Magus> Disallow: /admin/",
+        "* Magus cracks up"
+    ]
+}

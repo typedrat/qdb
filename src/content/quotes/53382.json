@@ -1,0 +1,10 @@
+{
+    "id": 53382,
+    "score": 34,
+    "lines": [
+        "<nuance> er s/./,",
+        "<cherub> don't forget to s/0,5/0.5/!",
+        "<nuance> regexp nazi",
+        "<cherub> s/nazi/victim/"
+    ]
+}
