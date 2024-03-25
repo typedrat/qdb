@@ -1,7 +1,0 @@
-{
-    "id": 13367,
-    "score": 828,
-    "lines": [
-        "<Blaxthos> find / -name \"*base*\" -user your -print |xargs 'chown us'"
-    ]
-}

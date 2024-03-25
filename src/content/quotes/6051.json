@@ -1,8 +1,0 @@
-{
-    "id": 6051,
-    "score": 372,
-    "lines": [
-        "<AccordionGuy> k%: SELECT * FROM People WHERE People.AttractedTo = 'me' ORDER BY People.HooterDimensions DESC",
-        "<AccordionGuy> Now *that's* SQL."
-    ]
-}

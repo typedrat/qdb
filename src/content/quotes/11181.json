@@ -1,9 +1,0 @@
-{
-    "id": 11181,
-    "score": 856,
-    "lines": [
-        "<bean2edu>Try seeding the RNG with the current system time, that should help somewhat",
-        "<kram>You do know that the numbers generated are still pseudo-random, and not true RNs.\u00a0 In fact there is no way to generate true random numbers.",
-        "<bean2edu>Obviously you've never had your wife balance the checkbook."
-    ]
-}

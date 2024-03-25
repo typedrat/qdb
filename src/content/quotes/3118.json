@@ -1,8 +1,0 @@
-{
-    "id": 3118,
-    "score": 236,
-    "lines": [
-        "<Orange1> why won't openbsd recognize my usb floppy drive?",
-        "<Orange1> it starts booting, but then can't find itself"
-    ]
-}

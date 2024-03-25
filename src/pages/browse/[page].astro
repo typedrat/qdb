@@ -1,28 +1,26 @@
 ---
 import type { GetStaticPaths, Page } from "astro";
-import type { CollectionEntry } from "astro:content";
-import { getCollection } from "astro:content";
 import { Icon } from "astro-icon/components";
 
 import Layout from "../../layouts/Layout.astro";
-import Quote from "../../components/Quote.astro";
+import Quote, { type QuoteData } from "../../components/Quote.astro";
+import quotes from "../_quotes.json";
 
 export const getStaticPaths = (async ({ paginate }) => {
-    const allQuotes = await getCollection("quotes");
-    allQuotes.sort((a, b) => a.data.id - b.data.id);
+    quotes.sort((a, b) => a.id - b.id);
 
-    return paginate(allQuotes, { pageSize: 25 });
+    return paginate(quotes, { pageSize: 25 });
 }) satisfies GetStaticPaths;
 
 interface Props {
-    page: Page<CollectionEntry<"quotes">>;
+    page: Page<QuoteData>;
 }
 
 const { page } = Astro.props;
 ---
 
 <Layout title="Browse Quotes">
-    {page.data.map((quote) => <Quote data={quote.data} />)}
+    {page.data.map((quote) => <Quote data={quote} />)}
 
     <div role="group">
         <a

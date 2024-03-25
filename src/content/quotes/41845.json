@@ -1,9 +1,0 @@
-{
-    "id": 41845,
-    "score": 271,
-    "lines": [
-        "<dyno> Anyone ever gotten the error \"Network Cable Unplugged\" ?",
-        "<kash[]> yea it means your network cable is unpluged",
-        "<dyno> at first I thought it was because of an IRQ setting, but we fixed that.. and I am still getting that error."
-    ]
-}

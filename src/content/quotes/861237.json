@@ -1,8 +1,0 @@
-{
-    "id": 861237,
-    "score": 825,
-    "lines": [
-        "<Quag7> Is there a way of enforcing a specific permissions octal on any new files created in a directory, irrespective of a user's umask?",
-        "<raf> I don't discuss philosophy on IRC"
-    ]
-}

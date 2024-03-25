@@ -1,8 +1,0 @@
-{
-    "id": 326,
-    "score": 1094,
-    "lines": [
-        "[CaptHowdy] [~] $ touch /dev/genitalia",
-        "[CaptHowdy] touch: /dev/genitalia: Permission denied"
-    ]
-}

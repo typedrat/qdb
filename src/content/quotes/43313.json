@@ -1,9 +1,0 @@
-{
-    "id": 43313,
-    "score": 150,
-    "lines": [
-        "<shapr> how do I correctly display two byte fonts?",
-        "<liiwi> you take the first byte and display it",
-        "<liiwi> then you take the other byte and display it"
-    ]
-}

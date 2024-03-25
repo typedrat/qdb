@@ -1,8 +1,0 @@
-{
-    "id": 80463,
-    "score": 213,
-    "lines": [
-        "<revmoo> does flock() not work on ntfs?",
-        "<Hendrix-> only if you compile with -lshepherd"
-    ]
-}

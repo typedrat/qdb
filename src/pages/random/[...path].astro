@@ -1,11 +1,11 @@
 ---
 export const prerender = false;
 
-import { getCollection } from "astro:content";
 import Reservoir from "reservoir";
 
 import Quote, { type QuoteData } from "../../components/Quote.astro";
 import Layout from "../../layouts/Layout.astro";
+import quotes from "../_quotes.json";
 
 interface Props {
     path: string | undefined;
@@ -13,15 +13,14 @@ interface Props {
 
 const { path } = Astro.params;
 
-let quotes = await getCollection("quotes");
 let selectedQuotes = Reservoir<QuoteData>(25);
 
 if (path === undefined) {
-    quotes.forEach((quote) => selectedQuotes.pushSome(quote.data));
+    quotes.forEach((quote) => selectedQuotes.pushSome(quote));
 } else if (path === "positive") {
     quotes.forEach((quote) => {
-        if (quote.data.score > 0) {
-            selectedQuotes.pushSome(quote.data);
+        if (quote.score > 0) {
+            selectedQuotes.pushSome(quote);
         }
     });
 } else {

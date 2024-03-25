@@ -1,8 +1,0 @@
-{
-    "id": 42347,
-    "score": 161,
-    "lines": [
-        "<sayza> Bug: Popup menus appear in strange places",
-        "<sayza> Resolution: Turn off \"smart window placement\""
-    ]
-}

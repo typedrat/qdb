@@ -1,9 +1,0 @@
-{
-    "id": 54757,
-    "score": 285,
-    "lines": [
-        "<TrouT> anyone know what this means:",
-        "<TrouT> python2.1: can't open file '/usr/local/sbin/RegisterVh3Service'",
-        "<+toad-> I think python2.1 can't open the file /usr/local/sbin/RegisterVh3Service"
-    ]
-}

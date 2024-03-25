@@ -1,8 +1,0 @@
-{
-    "id": 28033,
-    "score": 109,
-    "lines": [
-        "<@i-node> I thought battlenet checked to see if you were korean",
-        "<@i-node> if(iskorean()){acceptconnection();}"
-    ]
-}

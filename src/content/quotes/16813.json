@@ -1,8 +1,0 @@
-{
-    "id": 16813,
-    "score": 121,
-    "lines": [
-        "<B-ob> if (sleep < 0) then talk = null",
-        "<Stonefish> oh smeg off"
-    ]
-}

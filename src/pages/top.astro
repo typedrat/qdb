@@ -1,11 +1,9 @@
 ---
-import { getCollection } from "astro:content";
 import Layout from "../layouts/Layout.astro";
 import Quote from "../components/Quote.astro";
+import quotes from "./_quotes.json";
 
-const quotes = await getCollection("quotes");
-
-quotes.sort((a, b) => b.data.score - a.data.score);
+quotes.sort((a, b) => b.score - a.score);
 
 const top100 = quotes.slice(0, 100);
 ---
@@ -13,7 +11,7 @@ const top100 = quotes.slice(0, 100);
 <Layout title="Top 100">
     <!-- Top 100 comments: -->
     {
-        top100.map(({ data }) => {
+        top100.map((data) => {
             return <Quote data={data} />;
         })
     }
