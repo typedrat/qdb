@@ -29,7 +29,7 @@
 </script>
 
 <article>
-    <header>
+    <header data-pagefind-ignore>
         <h1>
             <a href="/quote/{data.id}">#{data.id}</a>
             (<span class={scoreClass(data.score)}>{data.score}</span>)

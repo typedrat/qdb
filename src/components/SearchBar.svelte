@@ -76,6 +76,10 @@
 </div>
 
 <style>
+    h6 {
+        margin-bottom: calc(0.5 * var(--pico-typography-spacing-vertical));
+    }
+
     .results-wrapper {
         position: relative;
     }
