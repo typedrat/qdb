@@ -30,23 +30,32 @@
 
 <article>
     <header>
-        <a href="/quote/{data.id}">#{data.id}</a>
-        (<span class={scoreClass(data.score)}>{data.score}</span>)
+        <h1>
+            <a href="/quote/{data.id}">#{data.id}</a>
+            (<span class={scoreClass(data.score)}>{data.score}</span>)
+        </h1>
     </header>
 
     {#each data.lines as line}
-        <span class="line">{line}</span>
-        <br />
+        <span class="line">{line} <br /></span>
     {/each}
 </article>
 
 <style>
-    article {
+    article,
+    h1 {
         font-family: var(--pico-font-family-monospace);
     }
 
     header {
         font-size: 1.25rem;
+    }
+
+    h1 {
+        font-size: unset;
+        font-weight: unset;
+        line-height: unset;
+        margin-bottom: unset;
     }
 
     .positive {

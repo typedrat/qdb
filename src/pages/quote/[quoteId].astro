@@ -19,5 +19,13 @@ const quoteData = quotes.find((quote) => quote.id === quoteId)!;
 ---
 
 <Layout title={`Quote #${quoteId} (${quoteData.score})`}>
-    <Quote data={quoteData} />
+    <div data-pagefind-body>
+        <Quote data={quoteData} />
+    </div>
 </Layout>
+
+<style>
+    div {
+        display: contents;
+    }
+</style>

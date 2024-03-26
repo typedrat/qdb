@@ -3,6 +3,7 @@ import "@fontsource/courier-prime";
 import { ViewTransitions } from "astro:transitions";
 import Themes from "astro-themes";
 import ThemeToggler from "../components/ThemeToggler.astro";
+import SearchBar from "../components/SearchBar.svelte";
 
 interface Props {
     title?: string;
@@ -40,6 +41,9 @@ const title = Astro.props.title ?? Astro.props.frontmatter?.title ?? "QDB";
                 <li>
                     <a href="/random">Random</a>
                     <a href="/random/positive">(&gt;0)</a>
+                </li>
+                <li>
+                    <SearchBar client:load />
                 </li>
                 <li>
                     <ThemeToggler />
