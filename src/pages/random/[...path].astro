@@ -20,7 +20,7 @@ const allIds = quotes.map(({ id }) => id);
 const positiveIds = positiveQuotes.map(({ id }) => id);
 ---
 
-<Layout>
+<Layout title="Random Quotes">
     <RandomQuoteListLoader
         ids={path === "positive" ? positiveIds : allIds}
         client:only
