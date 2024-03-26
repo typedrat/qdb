@@ -16,9 +16,7 @@
     );
 </script>
 
-{#await quotesPromise}
-    <p>Loading random quotes...</p>
-{:then quotes}
+{#await quotesPromise then quotes}
     {#each quotes as quote}
         <Quote data={quote} />
     {/each}
