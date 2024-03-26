@@ -18,6 +18,6 @@ const quoteId = parseInt(rawQuoteId, 10);
 const quoteData = quotes.find((quote) => quote.id === quoteId)!;
 ---
 
-<Layout title={`Quote #${quoteId} (${quoteData.id})`}>
+<Layout title={`Quote #${quoteId} (${quoteData.score})`}>
     <Quote data={quoteData} />
 </Layout>
