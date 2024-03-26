@@ -3,7 +3,7 @@ import type { GetStaticPaths, Page } from "astro";
 import { Icon } from "astro-icon/components";
 
 import Layout from "../../layouts/Layout.astro";
-import Quote, { type QuoteData } from "../../components/Quote.astro";
+import Quote, { type QuoteData } from "../../components/Quote.svelte";
 import quotes from "../_quotes.json";
 
 export const getStaticPaths = (async ({ paginate }) => {

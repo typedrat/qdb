@@ -1,10 +1,10 @@
 import { defineConfig } from "astro/config";
 import icon from "astro-icon";
-import vercel from "@astrojs/vercel/serverless";
+
+import svelte from "@astrojs/svelte";
 
 // https://astro.build/config
 export default defineConfig({
-    integrations: [icon()],
-    output: "hybrid",
-    adapter: vercel(),
+  integrations: [icon(), svelte()],
+  output: "static"
 });

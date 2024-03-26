@@ -1,37 +1,28 @@
 ---
-export const prerender = false;
-
-import Reservoir from "reservoir";
-
-import Quote, { type QuoteData } from "../../components/Quote.astro";
+import type { GetStaticPaths } from "astro";
 import Layout from "../../layouts/Layout.astro";
-import quotes from "../_quotes.json";
+
+export const getStaticPaths = (async () => {
+    return [{ params: { path: undefined } }, { params: { path: "positive" } }];
+}) satisfies GetStaticPaths;
 
 interface Props {
-    path: string | undefined;
+    path: "positive" | undefined;
 }
 
 const { path } = Astro.params;
 
-let selectedQuotes = Reservoir<QuoteData>(25);
+import quotes from "../_quotes.json";
+import RandomQuoteListLoader from "../../components/RandomQuoteListLoader.svelte";
+const positiveQuotes = quotes.filter(({ score }) => score > 0);
 
-if (path === undefined) {
-    quotes.forEach((quote) => selectedQuotes.pushSome(quote));
-} else if (path === "positive") {
-    quotes.forEach((quote) => {
-        if (quote.score > 0) {
-            selectedQuotes.pushSome(quote);
-        }
-    });
-} else {
-    return Astro.redirect("/404");
-}
+const allIds = quotes.map(({ id }) => id);
+const positiveIds = positiveQuotes.map(({ id }) => id);
 ---
 
-<Layout title="Random Quotes">
-    {
-        selectedQuotes.map((data) => {
-            return <Quote data={data} />;
-        })
-    }
+<Layout>
+    <RandomQuoteListLoader
+        ids={path === "positive" ? positiveIds : allIds}
+        client:only
+    />
 </Layout>
